@@ -979,47 +979,29 @@
     "identifier": {
       "type": "TOKEN",
       "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": "\\p{L}"
-              },
-              {
-                "type": "STRING",
-                "value": "_"
-              }
-            ]
-          },
-          {
-            "type": "REPEAT",
-            "content": {
+        "type": "REPEAT",
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
               "type": "CHOICE",
               "members": [
                 {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "PATTERN",
-                      "value": "\\p{L}"
-                    },
-                    {
-                      "type": "STRING",
-                      "value": "_"
-                    }
-                  ]
+                  "type": "PATTERN",
+                  "value": "\\p{L}"
                 },
                 {
-                  "type": "PATTERN",
-                  "value": "[0-9]"
+                  "type": "STRING",
+                  "value": "_"
                 }
               ]
+            },
+            {
+              "type": "PATTERN",
+              "value": "[0-9]"
             }
-          }
-        ]
+          ]
+        }
       }
     },
     "_literal": {
@@ -3496,4 +3478,3 @@
   "inline": [],
   "supertypes": []
 }
-
